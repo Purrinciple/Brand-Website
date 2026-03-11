@@ -214,6 +214,15 @@ max-height: 70vh;
   padding-top: 20px;
 }
 
+.hero-image2 img {
+  width: 100%;
+  max-height: 90vh;
+  height: auto;
+  object-fit: contain;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;
