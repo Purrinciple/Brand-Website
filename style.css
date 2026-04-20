@@ -134,7 +134,7 @@ body {
 
 /* SIZE VARIATIONS */
 .large {
-  grid-column: span 4;
+  grid-column: span 3;
 }
 
 .medium img {
@@ -795,14 +795,27 @@ background: linear-gradient(
 
 
 /* Show Poster */
+
 .poster-compare {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* equal columns */
   gap: 40px;
   align-items: start;
+  padding-left: 40px;
 }
 
 .poster-side img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
+
+.poster-side.final {
+  transform: scale(1.02);
+}
+
+.poster-side .poster-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
