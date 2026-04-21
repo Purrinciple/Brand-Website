@@ -16,7 +16,7 @@
 
 .header-waterfall {
   height: 10px;              /* controls “flow length” */
-  width: 50%;
+  width: 100%;
 
   background: linear-gradient(
     to bottom,
@@ -434,16 +434,6 @@ body.home .menu {
   transform: rotateY(180deg);
 }
 
-.currency-timeline::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  right: 40px;
-  height: 2px;
-  background: #d7dedf;
-  z-index: 0;
-}
 .currency-timeline {
    position: relative;
   height: 300px; /* gives us vertical space to work with */
@@ -453,17 +443,32 @@ body.home .menu {
   padding: 60px 40px;
   flex-wrap: nowrap;
 }
+.timeline-track {
+  position: relative;
+  display: inline-block; /* 👈 matches content width */
+}
+.timeline-track::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+  background: #d7dedf;
+
+  z-index: 0;
+}
 
 .currency-timeline::before {
   content: "";
   position: absolute;
-  overflow-x: visible;
-  overflow-x: visible;
   top: 50%;
   left: 40px;
 
   height: 2px;
-  max-width: 4000;
+ 
   background: #d7dedf;
   z-index: 0;
 }
@@ -480,11 +485,11 @@ body.home .menu {
   z-index: 2;
 }
 .timeline-card.top {
-  transform: translateY(-180px);
+  transform: translateY(-170px);
 }
 
 .timeline-card.bottom {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
 }
 .timeline-card.top::after {
   content: "";
