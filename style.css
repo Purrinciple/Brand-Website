@@ -46,7 +46,8 @@ body {
 /* GRID CONTAINER */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ grid-template-columns: repeat(4, 1fr);
+   grid-auto-rows: 180px;
   gap: 24px;
 
   padding: 60px;
@@ -62,7 +63,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
 
-  aspect-ratio: 4 / 3;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -84,13 +85,14 @@ body {
 }
 
 .wide {
-  grid-column: span 2;
-  aspect-ratio: 16 / 9;
+   grid-column: 1 / span 3;
+  grid-row: span 2;
+  aspect-ratio: 2.5 / 1;
 }
 
 .hero {
-  grid-column: span 4;
-
+  grid-column: 1 / span 2;
+ grid-row: span 3;
   /* REMOVE aspect ratio constraint */
   aspect-ratio: auto;
 
@@ -156,24 +158,35 @@ body {
 
 /* SIZE VARIATIONS */
 .large {
-  grid-column: span 3;
-}
-
-.medium img {
-max-height: 70vh;
-}
-.small {
   grid-column: span 2;
+  grid-row: span 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.project {
-  border: 1px solid red;
+
+.small {
+  grid-column: span 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+
 .project:hover .project-overlay,
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card.hero,
+  .project.wide,
+  .large {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+}
 
 .project-overlay {
   position: absolute;
@@ -620,7 +633,7 @@ background: linear-gradient(
   grid-template-columns: 2fr 1fr 1fr; /* give horizontals more room */
   grid-template-rows: 180px 180px;
   gap: 20px;
-    border: 3px solid blue;
+    
 
 padding: 0px 20px 100px 20px;
 }
@@ -629,7 +642,7 @@ padding: 0px 20px 100px 20px;
  width: 100%;
   height: 100%;
   object-fit: cover;
-    border: 3px solid blue;
+    
 }
 
 /* horizontals */
@@ -664,7 +677,7 @@ padding: 0px 20px 100px 20px;
 
   gap: 16px;
 
- border: 3px solid blue;
+
   padding: 0 20px;
 
 }
@@ -673,8 +686,7 @@ padding: 0px 20px 100px 20px;
   width: 80%;
   height: 80%;
   object-fit: cover;
-   border: 3px solid blue;
-
+  
 }
 
 /* big vertical */
@@ -708,7 +720,7 @@ padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-    border: 3px solid blue;
+  
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -716,7 +728,7 @@ padding: 0px 20px 100px 20px;
 .exploration-grid img {
   width: 80%;
   aspect-ratio: 2/3;
-  border: 3px solid blue;
+  
   object-fit: cover;
 }
 
@@ -725,21 +737,21 @@ padding: 0px 20px 100px 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-    border: 3px solid blue;
+  
     padding-left: 20px;
 }
 
 .icon-grid img {
   width: 100%;
 height: auto;
-  border: 3px solid blue;
+
   object-fit: contain;
 }
 .icon-grid img:nth-of-type(1) {
   grid-column: 2;
   width: 100%;
 height: auto;
-  border: 3px solid rgb(0, 255, 55);
+ 
   object-fit: contain;
 }
 
