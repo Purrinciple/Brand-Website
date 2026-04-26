@@ -964,3 +964,96 @@ background: linear-gradient(
   width: 100%;
   height: auto;
 }
+
+/* About page */
+.about-content {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.about-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.about-selfie {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 40px auto;
+}
+
+/* Contact page */
+.contact-content {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.contact-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.contact-content a {
+  color: #007acc;
+  text-decoration: none;
+}
+.contact-content a:hover {
+  text-decoration: underline;
+}
+
+/* Global Header */
+.alt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 32px; /* MUCH smaller */
+
+  background: white;
+
+  /* REMOVE sticky behavior */
+  position: relative;
+
+  border-bottom: 1px solid #eee;
+}
+
+/* LEFT */
+.logo {
+  height: 160px;   /* adjust this, not width */
+  width: auto;
+  display: block;
+}
+
+/* CENTER NAV */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-left.logo img{
+  max-height: 10px;   /* adjust this, not width */
+  width: auto;
+  display: block;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+
+.alt-header .nav-links a {
+  color: black;
+}
