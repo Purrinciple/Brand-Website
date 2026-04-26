@@ -9,18 +9,19 @@
   align-items: center;
 }
 .logo {
-  height: 160px;   /* adjust this, not width */
+  height: 100px;   /* adjust this, not width */
   width: auto;
   display: block;
+  padding-left: 5px;
 }
 
 .header-waterfall {
-  height: 10px;              /* controls “flow length” */
+  height: 3px;              /* controls “flow length” */
   width: 100%;
 
   background: linear-gradient(
     to bottom,
-    rgba(120, 190, 255, 0.95) 10%,
+    rgba(120, 190, 255, 0.95) 0%,
     rgba(11, 114, 210, 0.934) 30%,
     rgba(8, 0, 161, 0.0) 100%
   );
@@ -31,7 +32,7 @@
 
   font-size: 0.85rem;
   opacity: 0.7;
-  padding-left: 70px;
+  padding-left: 20px;
 }
 
 body {
@@ -953,6 +954,12 @@ background: linear-gradient(
   border: none; 
 }
 
+.animation-breakdown {
+  margin-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .moment-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -963,6 +970,14 @@ background: linear-gradient(
 .moment img {
   width: 100%;
   height: auto;
+}
+
+.moment {
+  transition: transform 0.2s ease;
+}
+
+.moment:hover {
+  transform: scale(1.02);
 }
 
 /* About page */
@@ -1008,22 +1023,38 @@ background: linear-gradient(
 /* Global Header */
 .alt-header {
   display: flex;
+    flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
-  padding: 12px 32px; /* MUCH smaller */
+  padding: 0px 40px; /* MUCH smaller */
 
   background: white;
 
   /* REMOVE sticky behavior */
   position: relative;
+}
+.alt-header::after {
+  content: "";
+  
+  height: 3px;
+  width: 100%;
 
-  border-bottom: 1px solid #eee;
+  background: linear-gradient(
+    to bottom,
+    rgba(120, 190, 255, 0.9),
+    rgba(11, 114, 210, 0.85),
+    rgba(8, 0, 161, 0)
+  );
 }
 
-/* LEFT */
 .logo {
-  height: 160px;   /* adjust this, not width */
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;   /* tweak this freely */
   width: auto;
   display: block;
 }
@@ -1035,11 +1066,6 @@ background: linear-gradient(
   gap: 24px;
 }
 
-.nav-left.logo img{
-  max-height: 10px;   /* adjust this, not width */
-  width: auto;
-  display: block;
-}
 
 
 .nav-links {
@@ -1049,11 +1075,11 @@ background: linear-gradient(
 
 .nav-links a {
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  color: rgba(11, 114, 210, 0.934);
+  font-size: 15px;
 }
 
-
-.alt-header .nav-links a {
-  color: black;
+.my-element.is-active {
+  opacity: 1;
+  visibility: visible;
 }
