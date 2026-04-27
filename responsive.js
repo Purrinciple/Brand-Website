@@ -1,14 +1,13 @@
 
-document.querySelectorAll('.project-link').forEach(link => {
-  let tapped = false;
-
-  link.addEventListener('click', function(e) {
-    if (!tapped && window.matchMedia("(hover: none)").matches) {
-      e.preventDefault();
-      tapped = true;
-      this.classList.add('active');
-
-      setTimeout(() => tapped = false, 1000);
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    if (window.matchMedia("(hover: none)").matches) {
+      
+      // if overlay not active → activate it
+      if (!this.classList.contains('active')) {
+        e.preventDefault();
+        this.classList.add('active');
+      }
     }
   });
 });
