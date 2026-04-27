@@ -279,7 +279,8 @@ body.home .menu {
 }
 
 .menu-toggle {
-  min-width: 40px;
+  
+  font-size: 15px !important;
   padding: 0.5rem 1rem;
     display: flex;
   align-items: center;
