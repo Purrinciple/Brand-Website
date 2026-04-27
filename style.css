@@ -255,8 +255,8 @@ body {
 /* Menu  */
 .menu {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
   font-size: 0.8rem;
   text-decoration: none;
@@ -281,6 +281,9 @@ body.home .menu {
 .menu-toggle {
   min-width: 40px;
   padding: 0.5rem 1rem;
+    display: flex;
+  align-items: center;
+  justify-content: center;
  border: 1px solid rgba(0,0,0,0.15);
   background: white;
   cursor: pointer;
