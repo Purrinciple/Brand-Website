@@ -198,7 +198,6 @@ body {
   transition: opacity 0.35s ease;
 
   display: flex;
-  flex-direction: column;
   align-items: flex-end;
 
   padding: 24px;
@@ -238,6 +237,21 @@ body {
   position: relative;
 }
 
+@media (max-width: 900px) {
+  .project-hero {
+    grid-template-columns: 1fr; /* stack */
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .video-container {
+    max-width: 100%;
+    
+  }
+}
+
 /* Menu  */
 .menu {
   position: fixed;
@@ -265,6 +279,7 @@ body.home .menu {
 }
 
 .menu-toggle {
+  min-width: 40px;
   padding: 0.5rem 1rem;
  border: 1px solid rgba(0,0,0,0.15);
   background: white;
@@ -966,6 +981,11 @@ background: linear-gradient(
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 30px;
+}
+@media (max-width: 900px) {
+  .moment-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .moment img {
