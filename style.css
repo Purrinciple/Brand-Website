@@ -268,14 +268,6 @@ body {
   border: 2px solid crimson;
 }
 
-@media (max-width: 900px) {
-  .menu {
-    top: 30px;
-    right: 30px;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
 
 .menu-toggle {
     flex-shrink: 0;
