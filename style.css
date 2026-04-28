@@ -342,6 +342,24 @@ body {
   padding: 80px;
   max-width: 500px;
 }
+
+@media (max-width: 900px) {
+  .project-hero {
+    grid-template-columns: 1fr;   /* stack */
+    min-height: auto;             /* stop forcing full screen */
+  }
+
+  .hero-text {
+    padding: 24px;                /* MUCH smaller */
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    max-height: none;             /* let it flow naturally */
+    padding: 16px;
+  }
+}
+
 .process-title {
   font-size: 28px;
   font-weight: 600;
