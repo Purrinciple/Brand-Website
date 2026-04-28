@@ -264,6 +264,7 @@ body {
   pointer-events: auto;
 
   transition: opacity 0.4s ease, transform 0.4s ease;
+  border: 2px solid crimson;
 }
 
 
