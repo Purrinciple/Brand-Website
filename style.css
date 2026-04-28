@@ -254,6 +254,7 @@ body {
 
 /* Menu  */
 .menu {
+  color:rgba(11, 114, 210, 0.85);
   position: fixed;
   top: 20px;
   right: 20px;
@@ -267,11 +268,13 @@ body {
   border: 2px solid crimson;
 }
 
-
-.menu.visible {
-  opacity: 1 !important;
-  transform: translateY(0);
-  pointer-events: auto;
+@media (max-width: 900px) {
+  .menu {
+    top: 30px;
+    right: 30px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
 
 .menu-toggle {
