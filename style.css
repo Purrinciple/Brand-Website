@@ -467,7 +467,11 @@ body.home .menu {
 .bill-back {
   transform: rotateY(180deg);
 }
-
+.currency-header {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  padding-left: 40px;
+}
 .currency-timeline {
    position: relative;
   height: 300px; /* gives us vertical space to work with */
