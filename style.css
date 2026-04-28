@@ -1032,12 +1032,19 @@ background: linear-gradient(
   padding: 0 20px;
   font-size: 1rem;
   line-height: 1.6;
+    padding-left: 40px;
+}
+.contact-grid {
+padding-left: 80px;
+
 }
 .contact-content h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 20px;
+  padding-left: 40px;
 }
 .contact-content a {
+    padding-left: 40px;
   color: #007acc;
   text-decoration: none;
 }
