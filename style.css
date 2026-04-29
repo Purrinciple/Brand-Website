@@ -186,7 +186,9 @@ body {
   .large {
     grid-column: span 2;
     grid-row: auto;
+  
   }
+
 }
 
 .project-overlay {
@@ -435,6 +437,13 @@ body {
   gap: 40px;
   align-items: start;
 }
+@media (max-width: 900px) {
+  .currency-layout {
+    grid-template-columns: 1fr;   /* stack */
+    gap: 20px;
+  }
+}
+
 .currency-bills {
   display: flex;
   flex-direction: column;
@@ -661,6 +670,26 @@ background: linear-gradient(
   padding: 0px;
 }
 
+@media (max-width: 900px) {
+  .illustration-top {
+    grid-template-columns: 1fr;   /* stack */
+    gap: 20px;
+  }
+
+  .hero-text {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .illustration-hero {
+    max-width: 100%;
+  }
+
+  .illustration-hero img {
+    max-height: none;
+  }
+}
+
 .process-grid {
   max-width: 900px;
   display: grid;
@@ -819,9 +848,65 @@ height: auto;
   padding-left: 200px;
 }
 
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .wide-top,
+  .wide-bottom,
+  .tall.left,
+  .tall.right {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .process-grid img {
+    height: auto;
+  }
+
+  @media (max-width: 900px) {
+  .refinement-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .refinement-grid * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .refinement-grid img {
+    width: 100%;
+    height: auto;
+}
+  }
+@media (max-width: 900px) {
+  .exploration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exploration-grid img {
+    width: 30%;
+  }
+}
+@media (max-width: 900px) {
+  .icon-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .icon-grid img:nth-of-type(1) {
+    grid-column: auto;
+  }
+}
+}
+
 .img-wrap {
   position: relative;
-  overflow: hidden; /* 👈 THIS is the magic */
+  overflow: hidden; 
 }
 
 .img-wrap img {
@@ -944,6 +1029,12 @@ background: linear-gradient(
   gap: 20px;
 }
 
+@media (max-width: 900px) {
+  .poster-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .poster-process-grid img {
   aspect-ratio: 3/4;
   width: 80%;
@@ -1002,6 +1093,7 @@ background: linear-gradient(
 @media (max-width: 900px) {
   .moment-grid {
     grid-template-columns: 1fr;
+    padding-top: 20px;
   }
 }
 
@@ -1147,21 +1239,29 @@ padding-left: 80px;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media (max-width: 900px) {
+  .games-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .games-grid1,
+  .games-grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .game-card {
   background-color: white;
-  border-radius: 8px;
   overflow: hidden;
 
   height: 100%;
 
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
   padding: 20px;
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
   transition: transform 0.2s ease;
 }
@@ -1169,7 +1269,7 @@ padding-left: 80px;
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
+
 }
 .game-card:hover {
   transform: scale(1.02);
